@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    color: white;
+    height: 209px;
+}
+.footer-logo{
+    background-color: black;
+    margin-top: 66px;
+    margin-bottom: 25px;
+}
+.legals{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+@media (max-width: 570px) {
+    .footer-container{
+        margin: 0;
+    }
+    .footer-logo{
+        background-color: black;
+        margin-top: 62px;
+        margin-bottom: 30px;
+    }
+    .legals{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+    }
+}
