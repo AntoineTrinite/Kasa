@@ -1,0 +1,11 @@
+.collapser{
+  margin-top: 31px;
+  min-height: 617px;
+}
+
+@media (max-width: 600px) {
+  .collapser{
+    margin-top: 19px;
+    min-height: 567px;
+  }
+}
