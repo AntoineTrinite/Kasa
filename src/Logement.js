@@ -1,14 +1,17 @@
-import React from 'react';
 import Header from './components/header';
-import Footer from './components/footer.js';
+import Footer from './components/footer';
+import LogementContainer from './components/logementContainer';
+import React from 'react';
 
-const Logement = () => {
+const Logements = () => {
+
   return (
-    <>
+    <div>
      <Header /> 
+      <LogementContainer />
      <Footer />
-    </>
+    </div>
   );
 };
 
-export default Logement;
+export default Logements;
