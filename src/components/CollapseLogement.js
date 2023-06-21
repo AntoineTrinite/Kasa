@@ -2,26 +2,35 @@ import React, { useState } from 'react';
 import '../styles/collapseLogement.css';
 import upVector from '../images/up-vector.svg';
 
-function CollapseLogement({ title, text }) {
+function CollapseLogement({ title, content }) {
   const [show, setShow] = useState(true);
 
   const handleToggle = () => {
     setShow(!show);
   };
 
+  const renderContent = () => {
+    if (Array.isArray(content)) {
+      return (
+        <ul className='collapse-list'>
+          {content.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      );
+    } else {
+      return <p className='collapse-text'>{content}</p>;
+    }
+  };
+
   return (
-    <div className='collapse' onClick={handleToggle}>
-      <div className='collapse-header'>
+    <div className='collapse'>
+      <div className='collapse-header' onClick={handleToggle}>
         <span className='collapse-title'>{title}</span>
-        <img
-          className={`direction-vector ${show ? 'rotate' : ''}`}
-          src={upVector}
-          alt="close collapse"
-          aria-label='close collapse'
-        />
+        <img className={`direction-vector ${show ? 'rotate' : ''}`} src={upVector} alt="close collapse" aria-label='close collapse' />
       </div>
 
-      {show ? <p className='collapse-text'>{text}</p> : null}
+      {show && <div className='collapse-content'>{renderContent()}</div>}
     </div>
   );
 }

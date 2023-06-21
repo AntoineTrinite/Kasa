@@ -7,7 +7,6 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
 }
 .image-gal{
     position: absolute;
@@ -36,8 +35,13 @@
 
 @media (max-width: 1260px) {
     .images-gallerie{
+        height: 335px;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .image-gal{
+        height: 335px;
+        border-radius: 25px;
     }
     .nav-arrow{
         height: 50px;

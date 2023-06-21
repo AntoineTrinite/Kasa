@@ -3,18 +3,19 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    margin-top: 26px;
     margin-bottom: 15px;
     gap: 76px;
     max-width: 1240px;
     align-items: flex-start;
 }
 
-
 @media (max-width: 1260px) {
     .collapse-row{
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        margin-top: 15px;
         margin-bottom: 15px;
         gap: 20px;
         align-items: center;
