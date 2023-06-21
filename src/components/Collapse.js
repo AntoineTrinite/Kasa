@@ -10,9 +10,9 @@ function Collapse({ title, text }) {
   };
 
   return (
-    <div className='collapse' onClick={handleToggle}>
-      <div className='collapse-header'>
-        <span className='collapse-title'>{title}</span>
+    <div className='collapse-normal' onClick={handleToggle}>
+      <div className='collapse-header-normal'>
+        <span className='collapse-title-normal'>{title}</span>
         <img
           className={`direction-vector ${show ? 'rotate' : ''}`}
           src={upVector}
@@ -21,7 +21,7 @@ function Collapse({ title, text }) {
         />
       </div>
 
-      {show ? <p className='collapse-text'>{text}</p> : null}
+      {show ? <p className='collapse-text-normal'>{text}</p> : null}
     </div>
   );
 }

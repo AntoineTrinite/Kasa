@@ -9,10 +9,10 @@ const CollapseRow = () => {
   const cardData = data.find((item) => item.id === id);
 
   return (
-    <div className='collapse-row'>
-      <CollapseLogement title="Description" content={cardData.description} />
-      <CollapseLogement title="Équipements" content={cardData.equipments} />
-    </div>
+      <div className='collapse-row'>
+        <CollapseLogement title="Description" content={cardData.description} />
+        <CollapseLogement title="Équipements" content={cardData.equipments} />
+      </div>
   );
 };
 

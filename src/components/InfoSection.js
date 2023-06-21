@@ -44,7 +44,7 @@ const InfoSection = () => {
           <div className='host-name'>{cardData.host.name}</div>
           <img className='host-pic' src={cardData.host.picture} alt={'gallerie'} />
         </div>
-        <StarRating rating={cardData.rating} />
+        <StarRating className="stars" rating={cardData.rating} />
       </div>
     </div>
   );

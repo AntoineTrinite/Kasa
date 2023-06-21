@@ -31,6 +31,17 @@
     position: absolute;
     transform: translate(-50%,-50%);
 }
+.gallerie-info{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.image-count{
+    font-size: 18px;
+}
 
 
 @media (max-width: 1260px) {
@@ -57,5 +68,8 @@
     .nav-arrow{
         height: 20px;
         width: 12px;
+    }
+    .gallerie-info{
+        display: none;
     }
 }

@@ -30,6 +30,9 @@ const Gallerie = () => {
             <img className='nav-arrow right' src={rightArrow} alt='rightArrow' onClick={handleNextImage} />
           </div>
         </div>
+        <div className='gallerie-info'>
+            <span className='image-count'>{currentImageIndex + 1}/{cardData.pictures.length}</span>
+          </div>
       </div>
     </div>
   );

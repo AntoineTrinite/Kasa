@@ -45,6 +45,8 @@
 .second-part{
     display: flex;
     flex-direction: column;
+    align-items: end;
+    gap: 27px;
 }
 .host{
     display: flex;
@@ -54,12 +56,23 @@
 }
 .host-name{
     max-width: 95px;
+    font-size: 18px;
     text-align: end;
 }
 .host-pic{
     height: 64px;
     width: 64px;
     border-radius: 50%;
+}
+
+.rating-stars{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.star-icon{
+    width: 24px;
+    height: 25px;
 }
 
 @media (max-width: 1260px) {
@@ -74,6 +87,11 @@
         flex-direction: column;
         margin-left: 20px;
         margin-right: 20px;
+        margin-bottom: 37px;
+    }
+    .star-icon{
+        width: 24px;
+        height: 25px;
     }
 }
 
@@ -81,10 +99,11 @@
 @media (max-width: 670px) {
     .info-section{
         text-overflow: clip;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
         margin-top: 15px;
         flex-direction: column;
+        align-items: stretch;
     }
     .title-logement{
         font-size: 18px;
@@ -98,8 +117,35 @@
         min-width: 84px;
         height: 18px;
         padding-top: 2px;
-        padding-left: 27px;
-        padding-right: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-radius: 10px;
+    }
+    .second-part{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        gap: 27px;
+    }
+    .host-name{
+        font-size: 12px;
+    }
+    .host-pic{
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+    }
+    .rating-stars{
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+    }
+    .star-icon{
+        width: 14px;
+        height: 14px;
     }
 }
