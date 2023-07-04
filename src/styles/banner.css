@@ -38,6 +38,7 @@
   .title-banner {
     position: absolute;
     margin: 0 20px;
+    padding-left: 16px;
     font-size: 24px;
     max-width: 217px;
     left: 0%;
