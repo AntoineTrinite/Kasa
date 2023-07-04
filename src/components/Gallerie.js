@@ -9,6 +9,7 @@ const Gallerie = () => {
   const { id } = useParams();
   const cardData = data.find((item) => item.id === id);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const showGalleryControls = cardData.pictures.length > 1;
 
   const handlePrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : cardData.pictures.length - 1));
@@ -22,17 +23,25 @@ const Gallerie = () => {
     <div className='gallerie'>
       <div className='images-gallerie'>
         <img className='image-gal' src={cardData.pictures[currentImageIndex]} alt={`gallerie-${currentImageIndex}`} />
-        <div className='chevrons'>
-          <div className='chevrons-left'>
-            <img className='nav-arrow left' src={leftArrow} alt='leftArrow' onClick={handlePrevImage} />
+        {showGalleryControls && ( // Condition pour afficher les éléments uniquement lorsque showGalleryControls est true
+          <div className='chevrons'>
+            {cardData.pictures.length > 1 && (
+              <div className='chevrons-left'>
+                <img className='nav-arrow left' src={leftArrow} alt='leftArrow' onClick={handlePrevImage} />
+              </div>
+            )}
+            {cardData.pictures.length > 1 && (
+              <div className='chevrons-right'>
+                <img className='nav-arrow right' src={rightArrow} alt='rightArrow' onClick={handleNextImage} />
+              </div>
+            )}
           </div>
-          <div className='chevrons-right'>
-            <img className='nav-arrow right' src={rightArrow} alt='rightArrow' onClick={handleNextImage} />
-          </div>
-        </div>
+        )}
         <div className='gallerie-info'>
+          {showGalleryControls && ( // Condition pour afficher l'élément uniquement lorsque showGalleryControls est true
             <span className='image-count'>{currentImageIndex + 1}/{cardData.pictures.length}</span>
-          </div>
+          )}
+        </div>
       </div>
     </div>
   );

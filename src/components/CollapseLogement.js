@@ -3,7 +3,7 @@ import '../styles/collapseLogement.css';
 import upVector from '../images/up-vector.svg';
 
 function CollapseLogement({ title, content }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const handleToggle = () => {
     setShow(!show);
