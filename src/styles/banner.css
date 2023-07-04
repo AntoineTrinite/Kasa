@@ -11,8 +11,6 @@
   object-fit: cover;
   border-radius: 25px;
   filter: brightness(70%);
-  margin-left: 20px;
-  margin-right: 20px;
 }
 .title-banner {
   position: absolute;
@@ -24,7 +22,12 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
+@media (max-width: 1275px) {
+  .banner-image {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
 @media (max-width: 800px) {
   .banner-container {
     margin: 0 auto;
@@ -34,6 +37,10 @@
     display: flex;
     margin-right: 20px;
     margin-left: 20px;
+  }
+  .banner-image {
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .title-banner {
     position: absolute;
