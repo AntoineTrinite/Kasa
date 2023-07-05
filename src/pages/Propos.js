@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './components/header';
-import Footer from './components/footer';
-import Collapse from './components/Collapse';
-import './styles/propos.css';
-import BannerAPropos from './components/banner-a-propos.js';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import Collapse from '../components/Collapse';
+import '../styles/propos.css';
+import BannerAPropos from '../components/banner-a-propos.js';
 
 
 const Propos = () => {

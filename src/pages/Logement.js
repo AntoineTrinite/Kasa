@@ -1,6 +1,6 @@
-import Header from './components/header';
-import Footer from './components/footer';
-import LogementContainer from './components/logementContainer';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import LogementContainer from '../components/logementContainer';
 import React from 'react';
 
 const Logements = () => {
