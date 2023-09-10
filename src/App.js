@@ -7,7 +7,7 @@ import Error404 from './pages/Error404';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/Kasa">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/logements/:id" element={<Logements />} />
