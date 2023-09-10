@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/logements/:id" element={<Logements />} />
         <Route path="/propos" element={<Propos />} />
         {/* 404 error page */}
-        <Route path="*" element={<Error404 />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </>
   );
